@@ -46,7 +46,7 @@ def convert(conval1, conval2, amount):
 	answer.place_forget()
 
 	answer.config(text=formatted)
-	answer.place(x=180, y=155, anchor="center")
+	answer.place(x=170, y=160, anchor="center")
 
 #Title labels
 titleText = Label(root, text='Currency Converter', bg='white', fg="black")
@@ -71,13 +71,17 @@ to.place(x=160, y=26)
 currency2 = ttk.Combobox(root, textvariable=variable2, values=currencyNames)
 currency2.place(x=190, y=40)
 
+#Amount Input Label
+enterAmount = Label(root, text="Enter your amount")
+enterAmount.place(x=117, y=70)
+
 #Amount entry input
 moneyVal = Entry(root)
-moneyVal.place(x=110, y=80)
+moneyVal.place(x=110, y=90)
 
 #Enter/Submission button
-enter = Button(root, text="Enter", command=lambda: convert(currency1.get(), currency2.get(), moneyVal.get())
-enter.place(x=150, y=110)
+enter = Button(root, text="Enter", width=10, command=lambda: convert(currency1.get(), currency2.get(), moneyVal.get()))
+enter.place(x=127, y=120)
 
 #Mainloop
 root.mainloop()
