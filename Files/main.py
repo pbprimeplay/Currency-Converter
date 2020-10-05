@@ -71,12 +71,10 @@ to.place(x=160, y=26)
 currency2 = ttk.Combobox(root, textvariable=variable2, values=currencyNames)
 currency2.place(x=190, y=40)
 
-#Amount Input Label
 enterAmount = Label(root, text="Enter your amount")
 enterAmount.place(x=117, y=70)
-
 #Amount entry input
-moneyVal = Entry(root)
+moneyVal = Entry(root, justify='center')
 moneyVal.place(x=110, y=90)
 
 #Enter/Submission button
